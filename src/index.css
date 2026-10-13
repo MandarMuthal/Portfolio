@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { @apply bg-ink text-slate-200 font-sans antialiased overflow-x-hidden; }
+:focus-visible { outline: 2px solid #8b9cff; outline-offset: 3px; border-radius: 6px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .blob { animation: none !important; } }
+
+@layer components {
+  .glass { @apply bg-white/[0.03] border border-white/10 backdrop-blur-md; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition duration-200 disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-primary { @apply bg-glow text-ink hover:shadow-[0_0_30px_-4px_#8b9cff] hover:-translate-y-0.5; }
+  .btn-ghost { @apply border border-white/15 text-slate-100 hover:border-glow/60 hover:bg-white/5; }
+  .grad-text { @apply bg-gradient-to-r from-white via-glow to-aqua bg-clip-text text-transparent; }
+}
+.blob { animation: drift 18s ease-in-out infinite alternate; }
+@keyframes drift { to { transform: translate(40px, -30px) scale(1.15); } }
+.grid-bg { background-image: linear-gradient(#ffffff08 1px, transparent 1px), linear-gradient(90deg, #ffffff08 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(ellipse at 50% 30%, #000 20%, transparent 70%); }
