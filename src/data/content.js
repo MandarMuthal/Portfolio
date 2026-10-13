@@ -6,7 +6,7 @@ export const profile = {
   email: "muthalmandar222@gmail.com",
   github: "https://github.com/MandarMuthal",
   linkedin: "https://in.linkedin.com/in/mandar-muthal-b594852b5",
-  resume: "/resume.pdf", // put your PDF at public/resume.pdf
+  resume: "/resume.pdf", 
   roles: ["Full-Stack Developer", "React Developer", "Java Backend Learner", "Problem Solver"],
 };
 
